@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -17,7 +18,7 @@ spec:
     spec:
       containers:
       - name: cn-website
-        image: jonsy13/cn-website:main-3e82ac65c95238c4431147f6c37cf04dbbf9e77a
+        image: jonsy13/cn-website:main-c0eef110e02bd1770ca7d0ba337513ca8a352b35
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
