@@ -3,6 +3,8 @@ kind: Deployment
 metadata:
   name: cn-website
   namespace: main
+  annotations:
+    fluxcd.io/automated: "true"
 spec:
   selector:
     matchLabels:
