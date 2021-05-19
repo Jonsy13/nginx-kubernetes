@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: cn-website
-        image: jonsy13/cn-website:main-c0eef110e02bd1770ca7d0ba337513ca8a352b35
+        image: jonsy13/cn-website:main-1cac5b1e5e02aaedfdc3315b981850abf14172ac
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
