@@ -1,23 +1,21 @@
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
-  namespace: web
-  annotations:
-    fluxcd.io/automated: "true"
+  name: cn-website
+  namespace: main
 spec:
   selector:
     matchLabels:
-      app: nginx
-  replicas: 2
+      run: cn-website
+  replicas: 3
   template:
     metadata:
       labels:
-        app: nginx
+        run: cn-website
     spec:
       containers:
-      - name: nginx
-        image: bharamicrosystems/nginx:v2
+      - name: cn-website
+        image: jonsy13/cn-website:main-3e82ac65c95238c4431147f6c37cf04dbbf9e77a
+        imagePullPolicy: Always
         ports:
-        - containerPort: 80
+        - containerPort: 3000
